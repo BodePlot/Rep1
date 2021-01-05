@@ -13,7 +13,7 @@ subplot(221)
 plot(t,senal)
 xlabel('Tiempo (Seg)')
 
-title('Señal Original')
+title('SeÃ±al Original')
 xlim([0 0.001])
 
 senal_tf = fft(senal);
@@ -23,7 +23,7 @@ subplot(222)
 plot(f,abs(senal_tf)/max(abs(senal_tf)));
 xlim([0 100000])
 xlabel('frecuencia (Hz)')
-title('Espectro de Señal Original')
+title('Espectro de SeÃ±al Original')
 
 fc = 75;
 wc = 2*pi*fc;
@@ -37,11 +37,11 @@ subplot(224)
 plot(f,abs(senal_tf_filtrada)/max(abs(senal_tf)),'r')
 xlim([0 (1e3)])
 xlabel('frecuencia (Hz)')
-title('Espectro de Señal Filtrada')
+title('Espectro de SeÃ±al Filtrada')
 
 senal_filtrada = ifft(senal_tf_filtrada);
 subplot(223)
 plot(t,real(senal_filtrada),'r')
 xlim([0 (0.1)])
 xlabel('Tiempo (Seg)')
-title('Señal Filtrada')
+title('SeÃ±al Filtrada')
